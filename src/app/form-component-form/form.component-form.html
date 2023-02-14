@@ -1,0 +1,83 @@
+<div class="container" id="container">
+    <h1>Registrace zákazníka</h1>
+    <form [formGroup]="reactiveForm" (ngSubmit)="submit()">
+        <div class="form-group mt-2">
+            <label for="company">Název</label><br>
+            <input type="text" id="company" name="company" placeholder="Název firmy" maxlength="40" formControlName="company">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('company').valid && reactiveForm.get('company').touched">Musíte zadat jméno společnosti</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="id">IČO</label><br>
+            <input type="text" name="id" placeholder="12345678" maxlength= "8" formControlName="id">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('id').valid && reactiveForm.get('id').touched">Musíte zadat IČO společnosti</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="address">Adresa firmy</label><br>
+            <input type="text" name="address" placeholder="Jakutská 87a" maxlength="40" formControlName="address">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('address').valid && reactiveForm.get('address').touched">Musíte zadat adresu společnosti</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="zip">PSČ</label><br>
+            <input type="text" name="zip" placeholder="12345" maxlength="5" formControlName="zip">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('zip').valid && reactiveForm.get('zip').touched">Musíte zadat PSČ</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="city">Město</label><br>
+            <input type="text" name="city" placeholder="Praha" maxlength="20" formControlName="city">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('city').valid && reactiveForm.get('city').touched">Musíte zadat město</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <h2>Jednatel</h2>
+            <label for="firstname">Křestní Jméno</label><br>
+            <input type="text" name="firstname" placeholder="Jan" maxlength="25" formControlName="firstname">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('firstname').valid && reactiveForm.get('firstname').touched">Musíte zadat jméno jednatele</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="familyname">Příjmení</label><br>
+            <input type="text" name="familyname" placeholder="Novák" maxlength="40" formControlName="familyname">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('familyname').valid && reactiveForm.get('familyname').touched">Musíte zadat příjmení jednatele</span>
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" placeholder="jan.novak@gmail.com" maxlength="40" formControlName="email">
+            <br>
+            <div>
+                <span style="color: red"
+                *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched">Musíte zadat platný mail</span>
+            </div>
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit"
+        *ngIf="reactiveForm.valid">Odeslat</button>
+    </form>
+</div>
+<div class = "container" id = "confirmation">
+</div>

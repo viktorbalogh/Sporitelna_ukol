@@ -1,0 +1,26 @@
+div{
+    text-align: center;
+    font-weight: bold;
+}
+#confirmation{
+  text-align: left;
+}
+.agreement{
+  text-align: center;
+}
+label{
+    text-align: left;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+  button{
+    width: 20%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: rgb(192, 199, 230);
+    font-size: large;
+    font-weight: bold;
+    border-radius: 4px;
+  }
